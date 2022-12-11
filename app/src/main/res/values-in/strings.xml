@@ -96,5 +96,6 @@
     <string name="start_navigation">Jalankan Navigasi</string>
     <string name="see_all_destination">Lihat semua destinasi</string>
     <string name="finder">Cari Lokasi</string>
+    <string name="list">Daftar Lokasi</string>
 
 </resources>

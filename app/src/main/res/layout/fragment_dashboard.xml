@@ -8,7 +8,8 @@
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        >
 
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/toolbar_tab"
@@ -16,14 +17,15 @@
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
             app:elevation="0dp"
-            android:fitsSystemWindows="true"
-            app:liftOnScroll="true">
+
+
+            >
 
             <com.google.android.material.appbar.CollapsingToolbarLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fitsSystemWindows="true"
-                app:layout_scrollFlags="scroll|enterAlways">
+                app:layout_scrollFlags="scroll">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -32,8 +34,8 @@
 
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/iv_welcome_photo"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="20dp"
                         android:contentDescription="welcome_profile_photo"
@@ -45,10 +47,10 @@
                         android:id="@+id/tv_welcome_username"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="3dp"
+                        android:layout_marginTop="5dp"
                         android:text="Welcome, User"
                         android:textColor="@color/txt_app"
-                        android:textSize="12sp"
+                        android:textSize="13sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="@+id/tv_welcome_date"
                         app:layout_constraintTop_toBottomOf="@+id/tv_welcome_date" />
@@ -58,9 +60,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="3dp"
                         android:textColor="@color/txt_app"
-                        android:textSize="10sp"
+                        android:textSize="20sp"
                         app:layout_constraintStart_toEndOf="@+id/iv_welcome_photo"
                         app:layout_constraintTop_toTopOf="@+id/iv_welcome_photo"
                         tools:text="July 26th, 2021" />
@@ -130,12 +132,12 @@
                         android:id="@+id/text_view_title_daftar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="4dp"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="13dp"
                         android:fontFamily="@font/poppins_medium"
-                        android:text="Pilih tempat wisatamu"
+                        android:text="@string/list"
                         android:textColor="@color/txt_app"
-                        android:textSize="16sp"
+                        android:textSize="20sp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/btn_search" />
 
@@ -144,9 +146,9 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_marginEnd="24dp"
-                        app:layout_constraintBottom_toBottomOf="@+id/tv_welcome_username"
+                        app:layout_constraintBottom_toBottomOf="@+id/iv_welcome_photo"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="@+id/tv_welcome_date"
+                        app:layout_constraintTop_toTopOf="@+id/iv_welcome_photo"
                         app:srcCompat="@drawable/favorite" />
 
                     <com.google.android.material.button.MaterialButton
@@ -154,14 +156,14 @@
                         android:id="@+id/btn_search"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                        android:layout_marginTop="25dp"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/finder"
+                        app:cornerRadius="30dp"
+                        app:icon="@drawable/ic_baseline_search_24"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/tv_welcome_username"
-                        app:srcCompat="@drawable/search_box"
-                        app:icon="@drawable/ic_baseline_search_24"
-                        android:text="@string/finder"
-                        >
+                        app:srcCompat="@drawable/search_box">
 
                     </com.google.android.material.button.MaterialButton>
 
@@ -178,8 +180,9 @@
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/vp_dashboard"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="60dp"
+            android:layout_height="902dp"
+
+            android:layout_marginBottom="100dp"
             app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
